@@ -6,7 +6,15 @@ This project was built using Angular, leaflet, usgeojson api, and bootstrap
 
 Run `npm install` to install the dependencies.
 
-Run `ng server` to start the server.
+```
+npm install
+```
+
+Run `ng serve` to start the server.
+
+```
+ng serve
+```
 
 Navigate to `localhost:4200` to view the app
 
