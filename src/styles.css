@@ -1,5 +1,10 @@
-
-html, 
+html,
 body {
-    height: 100%;
+  height: 100%;
+}
+
+.languageList {
+  font-size: 12px;
+  margin-left: 10px;
+  list-style-type: circle;
 }
