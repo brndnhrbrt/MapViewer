@@ -8,7 +8,6 @@ import { Coordinate } from './models/coordinate';
 import { element } from 'protractor';
 import { stat } from 'fs';
 
-
 @Injectable()
 export class DataService {
 

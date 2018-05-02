@@ -8,3 +8,7 @@ body {
   margin-left: 10px;
   list-style-type: circle;
 }
+
+.modal-dialog {
+  top: 20% !important;
+}

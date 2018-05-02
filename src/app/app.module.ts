@@ -7,7 +7,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DataService } from './data.service';
-import { MapComponent, NgbdModalContent } from './map/map.component';
+import { MapComponent } from './map/map.component';
+import { NgbdModalContent } from './ngbd-modal/ngdb-modal.component';
 
 @NgModule({
   declarations: [

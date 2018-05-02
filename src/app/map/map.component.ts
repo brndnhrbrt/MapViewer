@@ -1,45 +1,12 @@
-import { Component, OnInit, ViewChild, ApplicationRef, NgZone, Input } from '@angular/core';
-import { tileLayer, latLng, layerGroup, polyline, Polyline, LatLngExpression, polygon, circle, LeafletEvent } from 'leaflet';
-import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, NgZone } from '@angular/core';
+import { tileLayer, latLng, layerGroup, polyline, Polyline } from 'leaflet';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { DataService } from '../data.service';
+import { NgbdModalContent } from '../ngbd-modal/ngdb-modal.component';
 
 import { Feature } from '../models/feature';
 import { Coordinate } from '../models/coordinate';
-import { stat } from 'fs';
-import { NgClass } from '@angular/common';
-import { globalAgent } from 'http';
-import { Observable } from 'rxjs/Observable';
-
-
-@Component({
-  selector: 'ngbd-modal-content',
-  template: `
-    <div class="modal-header">
-      <h4 class="modal-title">{{ state }}</h4>
-      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="info-panel">
-        <li class="languageList" *ngFor="let language of languageArray">
-            {{ language.cat }} - <b>Est. Population: {{ language.est }}</b>
-        </li>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
-    </div>
-  `
-})
-export class NgbdModalContent {
-  @Input() name;
-
-  constructor(public activeModal: NgbActiveModal) {}
-}
-
-
 
 @Component({
   selector: 'app-map',
